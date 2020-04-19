@@ -1,0 +1,38 @@
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Edit User</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="hidden">
+        <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+      </div>
+      <div class="form-group">
+        <label for="username">UserName:</label>
+        <input type="text" formControlName="username" placeholder="username" name="username" class="form-control" id="username" readonly="true">
+      </div>
+  
+      <div class="form-group">
+        <label for="nom">Nom:</label>
+        <input formControlName="nom" placeholder="Nom" name="nom" class="form-control" id="nom">
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input formControlName="password" placeholder="Password" name="password" class="form-control" id="password">
+      </div>
+  
+      <div class="form-group">
+        <label for="role">Role:</label>
+        <input type="text" formControlName="role" placeholder="role" name="role" class="form-control" id="role">
+      </div>
+  
+      <div class="form-group">
+        <label for="nci">Nci:</label>
+        <input type="number" formControlName="nci" placeholder="nci" name="nci" class="form-control" id="nci">
+      </div>
+      <div class="form-group">
+        <label for="statut">Statut:</label>
+        <input type="text" formControlName="statut" placeholder="statut" name="statut" class="form-control" id="statut">
+      </div>
+  
+      <button class="btn btn-success">Update</button>
+    </form>
+  </div>

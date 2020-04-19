@@ -1,3 +1,6 @@
+import { ApiService } from './services/api.service';
+
+import { ListUserComponent } from './user/list-user/list-user.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
@@ -14,6 +17,10 @@ import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { FormConnexionComponent } from './components/form-connexion/form-connexion.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { JwtInterceptor } from './helpers/jwt-interceptor.service';
+import { AddUserComponent } from './user/add-user/add-user.component';
+import { EditUserComponent } from './user/edit-user/edit-user.component';
+
+
 
 
 
@@ -33,6 +40,11 @@ import { JwtInterceptor } from './helpers/jwt-interceptor.service';
     NavbarComponent,
     SidebarComponent,
     DashboardComponent,
+    ListUserComponent,
+    AddUserComponent,
+    EditUserComponent,
+    
+    
     
     
    
@@ -45,8 +57,8 @@ import { JwtInterceptor } from './helpers/jwt-interceptor.service';
     BrowserAnimationsModule,
     ReactiveFormsModule
   ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+  providers: [ ApiService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor,  multi: true }
   ],
   bootstrap: [AppComponent]
 })

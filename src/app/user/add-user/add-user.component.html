@@ -1,0 +1,40 @@
+<div class = "col-md-6 user-container">
+    <h2 class = "text-center"> Ajouter un utilisateur </h2>
+    <form [formGroup] = "addForm" (ngSubmit) = "onSubmit ()">
+      <div class = "form-group">
+        <label for = "username"> Username: </label>
+        <input type = "text" formControlName = "username" placeholder = "username" name = "username" class = "form-control" id = "username">
+      </div>
+      <div class = "form-group">
+        <label for = "nom"> Nom: </label>
+        <input type = "text" formControlName = "nom" placeholder = "nom" name = "nom" class = "form-control" id = "nom">
+      </div>
+      <div class = "form-group">
+        <label for = "email"> Email: </label>
+        <input formControlName = "email" placeholder = "email" name = "email" class = "form-control" id = "email">
+      </div>
+ 
+      <div class = "form-group">
+        <label for = "password"> password: </label>
+        <input type = "password" formControlName = "password" placeholder = "password" name = "password" class = "form-control" id = "password">
+      </div>
+ 
+      <div class = "form-group">
+        <label for = "nci"> Nci: </label>
+        <input formControlName = "nci" placeholder = "Nci" name = "nci" class = "form-control" id = "nci">
+      </div>
+ 
+      <div class = "form-group">
+        <label for = "telephone"> Telephone: </label>
+        <input formControlName = "telephone" placeholder = "Telephone" name = "telephone" class = "form-control" id = "telephone">
+      </div>
+ 
+ 
+      <div class = "form-group">
+        <label for = "profil"> Profil: </label>
+        <input type = "number" formControlName = "profil" placeholder = "profil" name = "profil" class = "form-control" id = "profil">
+      </div>
+ 
+      <button class = "btn btn-success"> Ajouter </button>
+    </form>
+  </div>
